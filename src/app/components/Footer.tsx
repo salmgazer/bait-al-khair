@@ -117,7 +117,7 @@ const Footer = () => {
                 transition={{ duration: 0.2 }}
               >
                 <PhoneIcon className="h-5 w-5 text-orange-500" />
-                <span>+971 123 4567</span>
+                <span>0598-577-005</span>
               </motion.li>
               <motion.li 
                 className="flex items-center gap-2"
@@ -125,7 +125,7 @@ const Footer = () => {
                 transition={{ duration: 0.2 }}
               >
                 <EnvelopeIcon className="h-5 w-5 text-orange-500" />
-                <span>info@baitalkhair.com</span>
+                <span>info@bait-al-khair.com</span>
               </motion.li>
             </ul>
           </motion.div>

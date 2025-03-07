@@ -3,34 +3,44 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MenuModal from './components/MenuModal';
+import { useState } from 'react';
+
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const openMenu = () => {
+    setIsMenuOpen(true);
+  
+  }
+
   const topDishes = [
     {
-      name: "Spicy Jollof Rice",
-      image: "/jollof.png",
-      price: "$15.99",
-      description: "Traditional Ghanaian rice dish cooked in rich tomato sauce"
+      name: "Collada",
+      image: "/collada.png",
+      price: "GH₵35",
+      description: "Authentic collada juice with irresistible taste."
     },
     {
       name: "Samosa",
       image: "/samosa.png", 
-      price: "$8.99",
+      price: "GH₵10",
       description: "Crispy pastry filled with spiced potatoes, peas and aromatic herbs"
     },
     {
       name: "Fresh Mango Juice",
       image: "/mango.png",
-      price: "$6.99",
+      price: "GH₵30",
       description: "Freshly squeezed mango juice with a hint of mint"
     },
     {
       name: "Chapati",
       image: "/chapati.png",
-      price: "$6.99",
-      description: "Freshly squeezed mango juice with a hint of mint"
+      price: "GH₵10",
+      description: "Soft and fluffy flatbread, perfect for scooping up curries and sauces"  
     }
-  ];
+    ];
 
   return (
     <>
@@ -81,11 +91,12 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              Experience a unique blend of flavors where African cuisine meets Italian classics. 
+              Experience a unique blend of flavors where East and West African cuisine meets Italian classics. 
               Fresh ingredients, passionate cooking, unforgettable taste.
             </motion.p>
 
             <motion.button 
+              onClick={openMenu}
               className="px-8 py-3 bg-orange-500 text-white rounded-full 
                 hover:bg-orange-600 transition-colors duration-300"
               initial={{ opacity: 0, y: 20 }}
@@ -97,7 +108,7 @@ export default function Home() {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              Order Now
+              Vew Menu
             </motion.button>
           </motion.div>
 
@@ -133,7 +144,9 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src="/everythingd.jpg"
+                  src="/everythingd-min.jpg"
+                  quality={90}
+                  priority={true}
                   alt="Delicious Pizza"
                   width={300}
                   height={400}
@@ -152,8 +165,10 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src="/mango2.jpg"
+                  src="/mango2-min.jpg"
                   alt="Fresh Juice"
+                  quality={90}
+                  priority={true}
                   width={300}
                   height={400}
                   className="rounded-lg shadow-lg mt-16"
@@ -200,6 +215,7 @@ export default function Home() {
                   <div className="flex justify-between items-center">
                     <span className="text-orange-600 font-bold text-lg">{dish.price}</span>
                     <motion.button 
+                      onClick={openMenu}
                       className="px-4 py-2 bg-orange-500 text-white rounded-full 
                         hover:bg-orange-600 transition-colors duration-300 text-sm tracking-wide"
                       whileHover={{ scale: 1.05 }}
@@ -213,7 +229,7 @@ export default function Home() {
             ))}
             <motion.div 
                 key={3} 
-                className="bg-white/40 rounded-4xl overflow-visible shadow-lg 
+                className="bg-white/40 mb-10 rounded-4xl overflow-visible shadow-lg 
                   hover:transform hover:scale-105 transition-all duration-300 max-w-[260px] mx-auto" // Adjusted max-width to 260px
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -221,7 +237,7 @@ export default function Home() {
                 transition={{ delay: 3 * 0.1, duration: 0.6 }} // Reduced delay between cards
                 whileHover={{ y: -5 }}
               >
-                <div className="h-40 w-32 -mt-8 mb-6 relative mx-auto"> {/* Added mx-auto and adjusted sizing */}
+                <div className="h-40 w-32 relative -mt-8 mx-auto item-center"> {/* Adjusted height if needed */}
                   <Image
                     src={topDishes[3].image}
                     alt={topDishes[3].name}
@@ -229,13 +245,13 @@ export default function Home() {
                     className="object-cover rounded-lg"
                   />
                 </div>
-
                 <div className="p-4 space-y-3">
                   <h3 className="text-xl font-gotham-thin text-gray-800 tracking-tight">{topDishes[3].name}</h3>
                   <p className="text-gray-600 text-sm tracking-wide">{topDishes[3].description}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-orange-600 font-gotham-bold text-lg">{topDishes[3].price}</span>
+                    <span className="text-orange-600 font-bold text-lg">{topDishes[3].price}</span>
                     <motion.button 
+                      onClick={openMenu}
                       className="px-4 py-2 bg-orange-500 text-white rounded-full 
                         hover:bg-orange-600 transition-colors duration-300 text-sm tracking-wide"
                       whileHover={{ scale: 1.05 }}
@@ -249,6 +265,10 @@ export default function Home() {
           </div>
         </section>
 
+        <MenuModal 
+          isOpen={isMenuOpen}
+          onClose={() => setIsMenuOpen(false)}
+        />
         <Footer />
 
       </main>

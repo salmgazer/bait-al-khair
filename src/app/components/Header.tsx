@@ -16,7 +16,6 @@ const Sidebar = ({isScrolled}: {isScrolled: boolean}) => {
   
     const menuItems = [
       { title: 'Home', icon: HomeIcon, href: '/' },
-      { title: 'Menu', icon: BookOpenIcon, href: '/menu' },
       { title: 'About', icon: InformationCircleIcon, href: '/about' },
     ]
   
@@ -228,17 +227,6 @@ const Header = () => {
                 >
                   <span className="relative">
                     Home
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/menu" 
-                  className="text-gray-700 relative group"
-                >
-                  <span className="relative">
-                    Menu
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                   </span>
                 </Link>

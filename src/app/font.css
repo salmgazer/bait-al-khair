@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:not(.not) .font-gotham-thin {
+    font-family: 'Gotham Thin', sans-serif !important;
+}
+
+:not(.not) .font-gotham-extra-light {
+    font-family: 'Gotham Extra Light', sans-serif !important;
+}
+
+:not(.not) .font-gotham-light {
+    font-family: 'Gotham Light', sans-serif !important;
+}
+
+:not(.not) .font-gotham-book {
+    font-family: 'Gotham Book', sans-serif !important;
+}
+
+:not(.not) .font-gotham-medium {
+    font-family: 'Gotham Medium', sans-serif !important;
+}
+
+:not(.not) .font-gotham-bold {
+    font-family: 'Gotham Bold', sans-serif !important;
+}
+
+:not(.not) .font-gotham-black {
+    font-family: 'Gotham Black', sans-serif !important;
+}
+
+:not(.not) .font-gotham {
+    font-family: 'Gotham Regular', sans-serif !important;
+  }
+  
+:not(.not) .font-gotham-ultra {
+    font-family: 'Gotham Ultra', sans-serif !important;
+}
+
+@font-face {
+    font-family: 'Gotham Thin';
+    src: url('/fonts/Gotham-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham Regular';
+    src: url('/fonts/Gotham-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('/fonts/Gotham-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham Ultra';
+    src: url('/fonts/Gotham-Ultra.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('/fonts/Gotham-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('/fonts/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham Extra Light';
+    src: url('/fonts/Gotham-Extra-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham Light';
+    src: url('/fonts/Gotham-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('/fonts/Gotham-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham Book Regular';
+    src: url('/fonts/Gotham-Book-Regular.otf') format('opentype');
+}

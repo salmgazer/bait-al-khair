@@ -42,10 +42,13 @@ const AboutPage = () => {
       <section className="container mx-auto px-4 py-24">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            // initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // viewport={{ once: true }}
+            // transition={{ duration: 0.8 }}
             className="grid md:grid-cols-2 gap-16 items-center"
           >
             <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
@@ -61,9 +64,8 @@ const AboutPage = () => {
             </div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               className="backdrop-blur-md bg-white/30 rounded-3xl p-12 shadow-xl"
             >
               <h2 className="text-2xl font-gotham-thin text-orange-600 mb-2">

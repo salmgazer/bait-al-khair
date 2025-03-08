@@ -12,7 +12,6 @@ export default function Home() {
 
   const openMenu = () => {
     setIsMenuOpen(true);
-  
   }
 
   const topDishes = [
@@ -48,11 +47,11 @@ export default function Home() {
       <div className="fixed inset-0 bg-white/60 backdrop-blur-sm -z-10"></div>
       <div className="fixed inset-0 -z-20">
         <Image
-          src="/vegs1.jpeg"
+          src="/vegs1-min.jpeg"
           alt="Background Pizza"
           fill
           className="object-cover"
-          priority
+          priority={true}
         />
       </div>
       <main className="relative min-h-screen px-6 md:px-12 lg:px-24"> {/* Added padding to main container */}

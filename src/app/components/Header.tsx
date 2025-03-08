@@ -88,7 +88,7 @@ const Sidebar = ({isScrolled}: {isScrolled: boolean}) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+              className=" bg-black/50"
             />
           )}
         </AnimatePresence>
@@ -197,7 +197,7 @@ const Header = () => {
 
   return (
     <header className={`sticky top-0 z-50 rounded-b-2xl transition-colors duration-300 ${
-        isScrolled ? 'bg-white/40 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+        isScrolled ? 'md:bg-white/40 md:backdrop-blur-sm md:shadow-sm' : 'bg-transparent'
       }`}>
 
 

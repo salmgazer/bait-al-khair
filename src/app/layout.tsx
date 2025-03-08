@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Big_Shoulders_Display } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 import "./font.css";
 
@@ -39,6 +40,9 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <GoogleAnalytics gaId="G-BM4VR6Q52K" />
     </html>
   );
 }
+
+

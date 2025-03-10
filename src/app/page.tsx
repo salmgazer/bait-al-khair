@@ -11,7 +11,8 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => {
-    setIsMenuOpen(true);
+    // redirect to https://chefly.starlabelapps.com/m/dKoCmlWBJnm-wDKQyhT6U
+    window.location.href = 'https://chefly.starlabelapps.com/m/dKoCmlWBJnm-wDKQyhT6U';
   }
 
   const topDishes = [
